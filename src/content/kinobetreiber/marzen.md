@@ -1,0 +1,59 @@
+---
+name: Peter Marzen
+years: "1883 – 1936"
+
+table:
+  Geboren: "23. August 1883"
+  Gestorben: "3. Juli 1936"
+  Beruf: "Kinobetreiber & Filmrezitator; später Eigentümer einer Filmverleihfirma"
+  Ort: "Trier; später auch Mayen und Saarbrücken"
+
+sources:
+  - id: "1"
+    text: "Marzen, P. (1933). Aus dem Leben eines rheinischen Filmpioniers: Eine Erinnerungsgabe zum fünfzigsten Geburtstag Peter Marzens und seiner 35-jährigen Zugehörigkeit zur Filmindustrie. Privatdruck [Biografische Festschrift]."
+  - id: "2"
+    text: 'Kremer, C. (2009, 27. März). Peter Marzen: Eine Trierer Kinolegende. Trierischer Volksfreund. <a href="https://www.volksfreund.de/region/trier-trierer-land/peter-marzen-eine-trierer-kinolegende_aid-5685757" rel="noopener noreferrer">https://www.volksfreund.de/region/trier-trierer-land/peter-marzen-eine-trierer-kinolegende_aid-5685757</a>.'
+  - id: "3"
+    text: 'Braun, B., & Jung, U. (2005). Local Films from Trier, Luxembourg and Metz: A Successful Business Venture of the Marzen Family, Cinema Owners. Film History, 17(1), 19–28. <a href="http://www.jstor.org/stable/3815466" rel="noopener noreferrer">http://www.jstor.org/stable/3815466</a>.'
+  - id: "4"
+    text: 'Hoppe, K., Loiperdinger, M., & Wollscheid, J. (2000). Trierer Lokalaufnahmen der Filmpioniere Marzen. In F. Kessler, S. Lenk & M. Loiperdinger (Eds.), Lokale Kinogeschichten (KINtop. Jahrbuch zur Erforschung des frühen Films, Bd. 9, S. 14–37). Stroemfeld/Roter Stern. <a href="https://doi.org/10.25969/mediarep/15939" rel="noopener noreferrer">https://doi.org/10.25969/mediarep/15939</a>.'
+  - id: "5"
+    text: "Braun, B., & Eifler, K. (2002). Kommt all heirönn zum Marzens Pitt: Kinoerlebnisse mit dem Filmerklärer Peter Marzen. Neues Trierisches Jahrbuch, 42, 173–186."
+  - id: "6"
+    text: 'Trierischer Volksfreund. (2012, 7. Februar). Ein Stück Geschichte auf 35 Millimetern. <a href="https://www.volksfreund.de/region/trier-trierer-land/ein-stueck-geschichte-auf-35-millimetern_aid-6385983" rel="noopener noreferrer">https://www.volksfreund.de/region/trier-trierer-land/ein-stueck-geschichte-auf-35-millimetern_aid-6385983</a>.'
+  - id: "7"
+    text: "Loiperdinger, M. (2008). Akzente des Lokalen im frühen Kino am Beispiel Trier. In C. Müller & H. Segeberg (Eds.), Kinoöffentlichkeit (1895–1920): Entstehung, Etablierung, Differenzierung / Cinema’s public sphere – emergence, settlement, differentiation (1895–1929) (pp. 236–246). Schüren."
+  - id: "8"
+    text: 'Herzig, M., & Loiperdinger, M. (2000). „Vom Guten das Beste“ – Kinematographenkonkurrenz in Trier. In F. Kessler, S. Lenk & M. Loiperdinger (Hrsg.), Lokale Kinogeschichten (KINtop. Jahrbuch zur Erforschung des frühen Films, Bd. 9, S. 38–51). Stroemfeld/Roter Stern. <a href="https://doi.org/10.25969/mediarep/15940" rel="noopener noreferrer">https://doi.org/10.25969/mediarep/15940</a>.'
+  - id: "9"
+    text: 'Braun, B. (2005). Lokalaufnahmen der Familie Marzen in Trier. In U. Jung & M. Loiperdinger (Eds.), Geschichte des dokumentarischen Films in Deutschland (Bd. 1: Kaiserreich 1895–1918, pp. 197–203). Philipp Reclam jun. <a href="https://mediarep.org/server/api/core/bitstreams/ab44eb55-e53c-4eb6-9248-02ed6a799a8d/content#page=198" rel="noopener noreferrer">https://mediarep.org/server/api/core/bitstreams/ab44eb55-e53c-4eb6-9248-02ed6a799a8d/content#page=198</a>.'
+  - id: "10"
+    text: 'Duckwitz, A., Loiperdinger, M., & Theisen, S. (2000). Kampf dem Schundfilm! Kinoreform und Jugendschutz in Trier. In F. Kessler, S. Lenk & M. Loiperdinger (Eds.), Lokale Kinogeschichten (KINtop. Jahrbuch zur Erforschung des frühen Films, Bd. 9, pp. 52–63). Stroemfeld/Roter Stern. <a href="https://doi.org/10.25969/mediarep/15941" rel="noopener noreferrer">https://doi.org/10.25969/mediarep/15941</a>.'
+  - id: "11"
+    text: 'Braun, B. (2002). Patriotisches Kino im Krieg: Beobachtungen in der Garnisonsstadt Trier. In F. Kessler, S. Lenk & M. Loiperdinger (Eds.), Kinematographen-Programme (KINtop, Jahrbuch zur Erforschung des frühen Films,  Bd. 11, pp. 100–121). Stroemfeld/Roter Stern. <a href="https://doi.org/10.25969/mediarep/15981" rel="noopener noreferrer">https://doi.org/10.25969/mediarep/15981</a> https://doi.org/10.25969/mediarep/15981.'
+  - id: "12"
+    text: "F Conen, S. (2002). Trier im frühen Kino: Eine filmische Zeitreise. Trier: Trier Medienwissenschaft, Universität Trier."
+  - id: "13"
+    text: 'Peter Marzen. (1936, 3. Juli). Luxemburger Wort, 89(185), 8. <a href="https://persist.lu/ark:70795/k60cf2g0g/pages/8/articles/DTL418" rel="noopener noreferrer">https://persist.lu/ark:70795/k60cf2g0g/pages/8/articles/DTL418</a>.'
+
+---
+
+Peter Marzen wurde am 23. August 1883 in Trier geboren und wuchs in einer Familie auf, die früh mit den technischen und unternehmerischen Möglichkeiten der neuen audiovisuellen Medien in Berührung kam <sup><a href="#source-1">1</a></sup><sup> <a href="#source-2">2</a></sup>. Sein Vater <a href="/geschichte">Wendel Marzen</a>, der ursprünglich aus einer Metzgerfamilie stammte, versuchte sich bereits in den 1890er Jahren erfolgreich im Schausteller- und Jahrmarktsgewerbe und erwarb spätestens 1895 einen Phonographen, den er der Bevölkerung im Raum Trier vorführte <sup><a href="#source-3">3</a></sup>. Diese frühe Beschäftigung mit Ton- und später Bildaufzeichnung legte den Grundstein für die filmische Tätigkeit der gesamten Familie Marzen.
+<br><br>
+Im Jahr 1897 brachte Wendel Marzen einen sehr primitiven Filmapparat sowie mehrere kurze Filme aus Paris mit nach Trier, wo im katholischen Vereinshaus Treviris die erste Filmvorführung der Familie stattfand <sup><a href="#source-1">1</a></sup> <sup><a href="#source-2">2</a></sup>. Nach dieser Uraufführung begann eine Phase intensiver Reisetätigkeit, in der die Marzens mit ihrem Wanderkino zahlreiche Städte in der Region bereisten <sup><a href="#source-1">1</a></sup> <sup><a href="#source-3">3</a></sup>. Innerhalb dieses Familienunternehmens nahm Peter Marzen früh eine besondere Rolle ein: Während Vater Wendel die organisatorische Leitung innehatte und Bruder Hubert Kamera und Projektor bediente, stand Peter neben der Leinwand und erklärte dem Publikum die gezeigten Filme <sup><a href="#source-1">1</a></sup> <sup><a href="#source-3">3</a></sup> <sup><a href="#source-4">4</a></sup> <sup><a href="#source-5">5</a></sup>.
+<br><br>
+Das <a href="/geschichte">Wanderkino</a> der Familie Marzen entwickelte sich zunehmend zu einem stabilen Geschäftsmodell. Einen zentralen Erfolgsfaktor bildeten dabei die <a href="/geschichte">Trierer Lokalaufnahmen</a> von Prozessionen, Umzügen und Alltagsszenen, die kurz nach ihrer Entstehung gezeigt wurden und das Publikum anzogen, weil viele Zuschauer sich selbst oder Bekannte auf der Leinwand wiedererkannten <sup><a href="#source-4">4</a></sup> <sup><a href="#source-6">6</a></sup> <sup><a href="#source-7">7</a></sup>.
+<br><br>
+Peter Marzen profilierte sich in dieser Phase zunehmend als charismatischer Filmerklärer und wurde selbst zu einer Attraktion der Vorführungen <sup><a href="#source-1">1</a></sup> <sup><a href="#source-2">2</a></sup> <sup><a href="#source-5">5</a></sup>. Er nutzte dabei bewusst den Trierer Dialekt und ergänzte die Bilder mit Geräuschen, Musik und verbalen Effekten, um die Illusion des „lebenden Bildes“ zu steigern <sup><a href="#source-3">3</a></sup> <sup><a href="#source-8">8</a></sup> <sup><a href="#source-9">9</a></sup>. Diese Praxis verschaffte Marzen einen deutlichen Wettbewerbsvorteil gegenüber der lokalen Konkurrenz <sup><a href="#source-5">5</a></sup>.
+<br><br>
+Der Übergang vom Wanderkino zum ortsfesten Kinobetrieb erfolgte im Jahr 1909, als die Familie Marzen den Kinematographen im <a href="/kino/central">Central-Theater</a> in der Brotstraße 36 übernahm <sup><a href="#source-2">2</a></sup> <sup><a href="#source-4">4</a></sup> <sup><a href="#source-8">8</a></sup>. Zunächst zeichnete Vater Wendel offiziell für die Direktion verantwortlich, doch bereits ab Sommer 1909 lag die tatsächliche Geschäftsführung zunehmend bei Peter Marzen <sup><a href="#source-4">4</a></sup> <sup><a href="#source-8">8</a></sup>. Infolge innerfamiliärer Konflikte übernahm er schließlich allein die Leitung und firmierte das Haus als <a href="/kino/central">„Trierisches Lichtspielhaus“</a> <sup><a href="#source-1">1</a></sup> <sup><a href="#source-4">4</a></sup>.
+<br><br>
+Trotz wachsender Konkurrenz durch andere Kinobetreiber wie <a href="/kinobetreiber/gitsels">Peter Gitsels</a> oder die <a href="/kino/reichshallen">Reichshallen-Lichtspiele</a> gelang es Peter Marzen, sich in Trier dauerhaft zu etablieren <sup><a href="#source-1">1</a></sup> <sup><a href="#source-8">8</a></sup> <sup><a href="#source-10">10</a></sup>. Einen Höhepunkt seiner unternehmerischen Tätigkeit markierte die Eröffnung der <a href="/kino/germania-modern">Germania-Lichtspiele</a> am 28. November 1913, die mit rund 500 Sitzplätzen das größte und modernste Kino der Stadt darstellten <sup><a href="#source-1">1</a></sup> <sup><a href="#source-2">2</a></sup> <sup><a href="#source-4">4</a></sup>. Die Eröffnung war ein gesellschaftliches Großereignis, an dem Vertreter aus Militär, Verwaltung, Kirche und Bürgertum teilnahmen, und unterstrich Marzens Stellung als führender Kinobetreiber der Stadt <sup><a href="#source-1">1</a></sup> <sup><a href="#source-11">11</a></sup>.
+<br><br>
+Mit dem Beginn des Ersten Weltkriegs im Sommer 1914 veränderten sich die Rahmenbedingungen des Kinobetriebs <sup><a href="#source-11">11</a></sup>. Peter Marzen passte sein Programm diesen Umständen an und setzte in den <a href="/kino/germania-modern">Germania-Lichtspielen</a> gezielt auf patriotische und militärische Filme, die das gewünschte heroische Bild des Krieges vermittelten <sup><a href="#source-1">1</a></sup> <sup><a href="#source-11">11</a></sup>. Zugleich unterstützte er den Boykott französischer und englischer Filme und zeigte ausschließlich Produktionen aus deutschen, italienischen und skandinavischen Studios <sup><a href="#source-11">11</a></sup>.
+<br><br>
+1916 gelang es Peter Marzen, auch das letzte konkurrierende Kino der Stadt, die <a href="/kino/reichshallen">Reichshallen-Lichtspiele</a>, zu übernehmen <sup><a href="#source-2">2</a></sup> <sup><a href="#source-4">4</a></sup> <sup><a href="#source-12">12</a></sup>. Dann vereinigte er die beiden großen Trierer Kinos – die <a href="/kino/reichshallen">Reichshallen</a> und das <a href="/kino/germania-modern">Germania</a> – unter dem Namen „Vereinigte Trierer Lichtspiele“ und erlangte faktisch ein Kinomonopol <sup><a href="#source-2">2</a></sup> <sup><a href="#source-11">11</a></sup> <sup><a href="#source-12">12</a></sup>.
+<br><br>
+In den 1920er Jahren geriet Marzen erneut unter Druck, insbesondere durch Mietkonflikte mit den Eigentümern der Kinogebäude. 1926 und 1927 wurde er sowohl aus den <a href="/kino/reichshallen">Reichshallen</a> als auch aus den <a href="/kino/germania-modern">Germania-Lichtspielen</a> ausgemietet, was das Ende seiner Trierer Kinotätigkeit bedeutete <sup><a href="#source-1">1</a></sup> <sup><a href="#source-2">2</a></sup> <sup><a href="#source-12">12</a></sup>. Versuche, ein neues Kino in Trier zu eröffnen, scheiterten, und ein kurzzeitiges Engagement in Mayen blieb wirtschaftlich erfolglos <sup><a href="#source-1">1</a></sup> <sup><a href="#source-2">2</a></sup> <sup><a href="#source-12">12</a></sup>.
+<br><br>
+1928 ließ sich Peter Marzen in Saarbrücken nieder, wo er eine Filmverleihfirma gründete und unter anderem für das Deutsche Lichtspiel-Syndikat tätig war <sup><a href="#source-1">1</a></sup> <sup><a href="#source-2">2</a></sup> <sup><a href="#source-12">12</a></sup>. Über sein späteres Leben ist nur wenig bekannt. Am 3. Juli 1936 wurde sein Tod bekannt gegeben. <sup><a href="#source-13">13</a></sup>.

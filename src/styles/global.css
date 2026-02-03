@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #fcf8f1;
+    font-family: "Open Sans", system-ui, sans-serif;
+    font-size: 18px;
+    color: #000000;
+  }
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  font-family: "Crimson Text", serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Crimson Text", serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: left;
+  color: black;
+  line-height: 1.3;
+}
+
+
+  h3 {
+    font-family: "Crimson Text", serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: black;
+    text-align: left;
+  }
+
+  h4 {
+    font-family: "Crimson Text", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+    text-align: left;
+  }
+
+@media (min-width: 768px) {
+    h1 {
+      font-size: 58px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    h4 {
+      font-size: 28px;
+    }
+  }
+
+  p {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    text-align: justify;
+    line-height: 1.65;
+  }
+
+ @media (min-width: 768px) {
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  }
+
+  .italic {
+  font-style: italic;
+  font-family: "Open Sans", system-ui, sans-serif;
+  text-align: center;
+  color: grey; 
+  font-size: 14px;
+  opacity: 0.5;
+  }
+
+  .center{
+  font-family: "Open Sans", system-ui, sans-serif;
+  text-align: center;
+  }
+
+  .team{
+  text-align: center;
+  }
+  
+  .bold{
+  font-family: "Open Sans", system-ui, sans-serif;
+  font-weight: 700;
+  }
+
+  .underline{
+   font-family: "Open Sans", system-ui, sans-serif;
+   text-decoration: underline;
+   text-decoration-thickness: 1.5px;
+  }
+
+  .italic2 {
+  font-style: italic;
+  font-family: "Open Sans", system-ui, sans-serif;
+  }
+
+  table {
+    line-height: 1.25;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    table {
+      font-size: 16px;
+    }
+  }
+
+@layer utilities {
+  .font-crimson {
+    font-family: "Crimson Text", serif;
+  }
+}
+}

@@ -1,0 +1,29 @@
+---
+interface Source {
+  id: string;
+  text: string;
+}
+
+const { sources } = Astro.props as { sources: Source[] };
+---
+
+<div class="w-full max-w-6xl mx-auto my-12">
+  <details id="sources-accordion" class="group border border-gray-300 rounded-md p-4">
+    <summary class="flex justify-between items-center cursor-pointer list-none">
+      <h2 class="team text-xl">Literaturverzeichnis</h2>
+      <span class="text-2xl transition-transform duration-300 group-open:rotate-45">+</span>
+    </summary>
+
+    <div class="mt-4 space-y-4">
+      {sources.map((source) => (
+  <p
+    id={`source-${source.id}`}
+    class="pl-6 -indent-6 text-sm leading-relaxed"
+    set:html={`[${source.id}]: ${source.text}`}
+  ></p>
+))}
+
+
+    </div>
+  </details>
+</div>

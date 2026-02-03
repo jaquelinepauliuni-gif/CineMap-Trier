@@ -1,0 +1,85 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../../Layouts/layout.astro";
+import ImageCarousel from "../../Layouts/components/ImageCarousel.astro";
+import InfoTable from "../../Layouts/components/InfoTable.astro";
+import SourcesAccordion from "../../Layouts/components/SourcesAccordion.astro";
+import LicenseAccordion from "../../Layouts/components/LicenseAccordion.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("kino");
+
+  return entries.map((entry: CollectionEntry<"kino">) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"kino">;
+}
+
+const { entry } = Astro.props as Props;
+
+const { Content } = await entry.render();
+const hasImages = entry.data.images?.length > 0;
+const hasVideo = Boolean(entry.data.video);
+---
+
+<Layout>
+  <h1 class="text-5xl font-bold mb-8">{entry.data.name}</h1>
+
+  {hasImages ? (
+    <div>
+      <section class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <ImageCarousel images={entry.data.images} />
+        </div>
+        <div class="w-full">
+          <InfoTable data={entry.data.table} />
+        
+        {hasVideo && (
+  <div class="mt-12">
+    <video
+      src={entry.data.video.src}
+      controls
+      class="mx-auto w-full max-w-md rounded-lg shadow"
+    />
+
+    {entry.data.video.copyright && (
+      <div class="mt-1 text-xs text-gray-500 text-center">
+        {entry.data.video.sourceId ? (
+          <a
+            href={`#license-${entry.data.video.sourceId}`}
+            class="underline"
+          >
+            © {entry.data.video.copyright}
+          </a>
+        ) : (
+          <span>© {entry.data.video.copyright}</span>
+        )}
+      </div>
+    )}
+  </div>
+)}
+
+        </div>
+      </section>
+      <div class="mt-12 prose max-w-none">
+        <Content />
+      </div>
+    </div>
+  ) : (
+    <div>
+      <div class="float-right w-1/2 ml-8 mb-4">
+        <InfoTable data={entry.data.table} />
+      </div>
+      <div class="prose max-w-none">
+        <Content />
+      </div>
+    </div>
+  )}
+
+  {entry.data.sources && <SourcesAccordion sources={entry.data.sources} />}
+  {entry.data.licenses && <LicenseAccordion licenses={entry.data.licenses} />}
+</Layout>

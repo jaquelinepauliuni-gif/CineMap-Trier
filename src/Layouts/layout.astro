@@ -1,0 +1,31 @@
+---
+import '../styles/global.css'
+
+import Navigation from "./components/navigation.astro";
+import Footer from "./components/footer.astro";
+
+const { fullWidth = false } = Astro.props;
+---
+
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/images/dunkel.png" />
+        <link rel="stylesheet" href="/src/styles/global.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet"/>
+
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>CineMap Trier</title>
+	</head>
+	<body class="min-h-screen flex flex-col">
+        <Navigation />
+		<main class={fullWidth ? "w-full py-8 grow" : "container mx-auto py-8 grow"}>
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

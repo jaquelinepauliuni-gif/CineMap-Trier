@@ -1,0 +1,63 @@
+---
+import Layout from '../Layouts/layout.astro';
+---
+
+<Layout>
+  <h1 class="text-7xl md:text-4xl mb-6">Methoden</h1>
+
+  <br>
+  <div class="w-full mx-auto space-y-4 max-w-6xl">
+    <details class="group border border-gray-300 rounded-md p-3">
+      <summary class="flex justify-between items-center cursor-pointer list-none">
+        <h3 class="team">(historisches) Material</h3>
+        <span class="transition-transform duration-300 group-open:rotate-45">+</span>
+      </summary>
+      <p>
+        Im Projekt <i>CineMap Trier</i> erfolgt die Rekonstruktion der lokalen Kinogeschichte auf der Grundlage historischer Materialien. Ziel ist es, die Entwicklung der Trierer Kinolandschaft sowohl in zeitlicher als auch in räumlicher Hinsicht möglichst differenziert und nachvollziehbar darzustellen. <br><br>
+        Die methodische Arbeit umfasst die systematische Erhebung, quellenkritische Bewertung und den Abgleich unterschiedlicher Materialtypen. Dazu zählen zeitgenössische Zeitungsartikel, digitalisierte Zeitschriften und wissenschaftliche Beiträge, Branchenverzeichnisse und Adressbücher sowie historische und aktuelle Fotografien der Kinos. Durch die Kombination dieser heterogenen Quellen wird versucht, einzelne Informationen zu verifizieren, zeitlich und in ihren jeweiligen Kontext einzuordnen. <br><br>
+        Zur Unterstützung der Texterschließung wurden daher teilweise OCR-Verfahren eingesetzt, deren Ergebnisse jedoch stets überprüft und nicht ungeprüft übernommen wurden. Auf diese Weise konnten relevante Textstellen identifiziert und für die weitere Auswertung nutzbar gemacht werden. <br><br>
+        Aufgrund der teilweise fragmentarischen Überlieferungslage – insbesondere bei kleineren oder kurzzeitig betriebenen Kinos – sind nicht alle Befunde eindeutig belegbar. Rekonstruierende Annahmen und Unsicherheiten werden im Projekt daher transparent gemacht und ausdrücklich als solche gekennzeichnet.
+      </p>
+    </details>
+
+    <details class="group border border-gray-300 rounded-md p-3">
+      <summary class="flex justify-between items-center cursor-pointer list-none">
+        <h3 class="team">Karte</h3>
+        <span class="transition-transform duration-300 group-open:rotate-45">+</span>
+      </summary>
+      <p> Um sich einen visuellen Überblick über die ehemaligen und modernen Kinos zu verschaffen, wurde eine   digitale Karte erstellt, die die Entwicklung der Trierer Kinolandschaft nachvollzieht. Dabei wurde die Karte zunächst mit QGIS georeferenziert. Auf Basis historischer Stadtpläne, Adressverzeichnisse und weiterer archivalischer Quellen wurden die Standorte der ehemaligen und heutigen Kinos ermittelt und als Punkte eingetragen. Dafür wurden die Digitalisate über eine geografisch korrekte moderne Karte OpenStreetMap gelegt, um die historischen Orte präzise im heutigen Stadtbild zu verorten. Die erstellten Geodaten wurden danach in eine interaktive Webkarte überführt, die mit dem Plugin qgis2web exportiert und mithilfe von Leaflet im Browser visualisiert wurde. 
+          <br><br>
+      So entstand ein digitales Werkzeug, das die räumlichen Veränderungen der Trierer Kinolandschaft anschaulich macht. Kino ist Kultur und Kultur muss sichtbar sein – genau diesem Prinzip folgt die Karte, indem sie die Kinos als Räume des kulturellen Austausches im Stadtbild wieder erfahrbar macht.</p>
+    </details>
+
+    <details class="group border border-gray-300 rounded-md p-3">
+      <summary class="flex justify-between items-center cursor-pointer list-none">
+        <h3 class="team">Zeitleiste</h3>
+        <span class="transition-transform duration-300 group-open:rotate-45">+</span>
+      </summary>
+      <p>
+        Um die chronologische Entwicklung der Trierer Kinogeschichte sowie die Betriebsdauer einzelner Spielstätten im Kontext der Zeitgeschichte darzustellen, wurde eine interaktive Zeitleiste auf Basis von Timeline.js entwickelt. <br>
+        Die Datengrundlage bildete eine strukturierte Datenbank, in der Eröffnungsdatum, Schließungen und kurze zusammenfassende Vorstellungen jedes Kinos systematisch erfasst wurden. Ein besonderer Fokus lag hierbei auf der Verknüpfung von Zeitdaten mit begleitenden Metadaten wie zeitgenössischen Fotografien. Durch die chronologische Anordnung wird es den Nutzer*innen ermöglicht, die Blütezeit sowie das Kinosterben in Trier in Relation zu historischen Zäsuren zu setzen. <br><br>
+        Diese Zeitleiste fungiert somit als komplementäres Instrument zur Karte: Während die Karte den Raum visualisiert, macht die Zeitleiste die zeitliche Tiefe und die Dynamik der Kino-Transformation greifbar.
+      </p>
+    </details>
+
+    <details class="group border border-gray-300 rounded-md p-3">
+      <summary class="flex justify-between items-center cursor-pointer list-none">
+        <h3 class="team">Webseite</h3>
+        <span class="transition-transform duration-300 group-open:rotate-45">+</span>
+      </summary>
+        <h3>Framework: Astro</h3>
+        <p>Für das Erstellen der Webseite wurde das moderne Web-Framework Astro gewählt. Im Vergleich zur Verwendung von bloßem HTML ermöglicht Astro eine wirtschaftlichere Verwendung von Ressourcen und erleichtert die Strukturierung des Projekts. Astro ist darauf optimiert, schnelle Websites zu erstellen, indem es beim Build-Prozess statische HTML-Seiten erzeugt und JavaScript nur dort lädt, wo es wirklich gebraucht wird.
+        Die Wahl fiel auf Astro, da es perfekt mit GitHub Pages kompatibel ist, eine sehr gute Performance bietet und volle Kontrolle über die geladene JavaScript-Menge ermöglicht. Zudem lässt es sich problemlos mit verschiedenen anderen Tools, z.B. zur Erstellung des Zeitstrahls, kombinieren. Astro ermöglicht die Wiederverwendung einzelner Code-Komponenten wie Bilder-Karussells oder Navigationsbars auf mehreren Seiten. Auch das dynamische Erzeugen von Unterseiten für jedes Kino bzw. jeden Betreiber wurde so ermöglicht.</p>
+        <br>
+        <h3>Design und Prototyping</h3>
+        <p>Das Design wurde auf unser Projekt abgestimmt. Die Farbe Rot – angelehnt an Kinovorhänge der frühen Kinos – soll Besucher*innen an das Kino erinnern, zieht Aufmerksamkeit auf sich und soll so beim Besucher Interesse wecken.
+        Für das Erstellen von Mock-Ups wurde mit der Software Figma gearbeitet, die eine Mischung aus Vektorgrafik-Editor und Prototyping-Tool ist. Darauf aufbauend wurden nach und nach alle Inhalte mittels neuer Astro-Seiten (die zu HTML kompiliert werden) und Anpassungen in TailwindCSS-, Markdown- und JSON-Dateien eingefügt. Hierbei wurde besonders darauf geachtet, dass die Inhalte mit all ihren Funktionen benutzerfreundlich eingebunden werden und das Design dabei einheitlich bleibt.</p>
+        <br>
+        <h3>Hosting und Open Source</h3>
+        <p>Unsere Website wird statisch von GitHub Pages gehostet. GitHub bietet eine kostenlose und sichere Möglichkeit, die Webseite öffentlich zu präsentieren, wobei das Repository mit den verwendeten Code-Dateien direkt mit der Webseite verknüpft ist.
+        Durch die Nutzung eines öffentlichen GitHub Repository ist die Website Open Source und wird nachhaltig gehostet. Damit werden die FAIR-Prinzipien (Findable, Accessible, Interoperable, Reusable) umgesetzt: Alle haben Zugriff auf den Webseitencode und die Projektergebnisse, sodass die Prinzipien der Transparenz und Nachvollziehbarkeit konsequent umgesetzt werden.</p>
+    </details>
+  </div>
+</Layout>

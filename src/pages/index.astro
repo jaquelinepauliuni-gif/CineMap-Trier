@@ -1,0 +1,238 @@
+---
+import '../styles/global.css'
+import Layout from '../Layouts/layout.astro'
+import Counter from '../Layouts/components/counter.astro';
+import ImageCarousel from '../Layouts/components/ImageCarousel.astro';
+
+const carouselImages = [
+  {
+    src: '/images/Schmitt_Scan_07_Nov_2012_6.jpg',
+    copyright: 'Quelle: Privatsammlung Schmitt'
+  },
+  {
+    src: '/images/Schmitt_Scan_07_Nov_2012_11.jpg',
+    copyright: 'Quelle: Privatsammlung Schmitt'
+  },
+  {
+    src: '/images/Neues_Theater4.jpg',
+    copyright: 'Quelle: Privatsammlung Schmitt'
+  },
+  {
+    src: '/images/Apollo-Theater-Aussenansicht.jpg',
+    copyright: 'Quelle: Privatsammlung Schmitt/Kotschka'
+  },
+  {
+    src: '/images/Filmtheater_001bearb.jpg',
+    copyright: 'Quelle: Privatsammlung Kotschka'
+  },
+  {
+	src: "/images/Apollo-Theaterfoyer2.jpg",
+    copyright: "Quelle: Privatsammlung Schmitt/Kotschka"
+  },
+  {
+	src: "/images/Capitol1.jpg",
+    copyright: "Quelle: Privatsammlung Schmitt"
+  },
+  {
+	src: "/images/Metropol.jpg",
+    copyright: "Quelle: Privatsammlung Schmitt"
+  },
+  {
+   	src: "/images/Apollo-Theaterkasse.jpg",
+    copyright: "Quelle: Privatsammlung Schmitt/Kotschka"
+  },
+  {
+	src: "/images/Atrium-Fassade.png",
+    copyright: "Copyright Medienwisschenschaft Universität Trier 2000"
+  },
+  {
+	src: "/images/Broadway1.jpg",
+    copyright: "Privatfoto: Arina Singatulina"
+  },
+  {
+	src: "/images/Neues_Theater.jpg",
+    copyright: "Quelle: Privatsammlung Schmitt"
+  }
+];
+---
+
+<Layout>
+  <img src="/images/dunkel.png" 
+       alt="CineMap Logo"
+       class="h-58 w-auto mx-auto"/> 
+  <h1 class="text-center text-5xl font-bold mt-4">CineMap Trier</h1>
+  <h2 class="text-center text-3xl mt-2" style='font-family: "Crimson Text", serif;'>
+    Eine digitale Geschichte des Kinos in der Stadt
+  </h2>
+  <br> 
+  <Counter client:load />
+
+  <p class="pl-12.5 pr-12.5 mt-6">Willkommen bei CineMap Trier, einem Digital Humanities Projekt der Universität Trier, das die spannende Geschichte des Kinos in Trier auf interaktive Weise erlebbar macht. Von den frühen Wanderkinos des 19. Jahrhunderts über die ersten ortsfesten Lichtspielhäuser bis hin zu den modernen Kinos der Gegenwart – CineMap zeigt die Entwicklung der Kinolandschaft in der Stadt über die Jahrzehnte hinweg.</p>
+  
+  <p class="pl-12.5 pr-12.5 mt-4">CineMap Trier lädt dazu ein, die Geschichte des Kinos in Trier interaktiv zu erkunden: Entdecken Sie historische Kinos, erfahren Sie mehr über vergangene Filmwelten und lassen Sie sich von der kulturellen Dynamik der Stadt über die Zeit hinweg inspirieren.</p>
+
+  <section class="py-8 px-4 max-w-7xl mx-auto">
+    <div class="grid gap-8 md:grid-cols-3 mb-8">
+      <a href="/karte" class="block mx-auto">
+        <div class="bg-[#f9f1e2] rounded-lg shadow overflow-hidden text-center w-80 h-80 mx-auto flex flex-col">
+          <h3 class="text-xl text-center font-bold text-gray-900 mb-2 mt-2">Karte</h3>
+          <img src="/images/Schmitt_Scan_07_Nov_2012_6.jpg" alt="Trier" class="w-full h-64 object-cover"/>
+          <div class="flex justify-end mt-1 px-2">
+            <span class="text-xs text-gray-500">© Quelle: Privatsammlung Schmitt</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/geschichte" class="block mx-auto">
+        <div class="bg-[#f9f1e2] rounded-lg shadow overflow-hidden text-center w-80 h-80 mx-auto flex flex-col">
+          <h3 class="text-xl text-center font-bold text-gray-900 mb-2 mt-2">Geschichte</h3>
+          <img src="/images/Schmitt_Scan_07_Nov_2012_11.jpg" alt="Film" class="w-full h-64 object-cover"/>
+          <div class="flex justify-end mt-1 px-2">
+            <span class="text-xs text-gray-500">© Quelle: Privatsammlung Schmitt</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/zeitleiste" class="block mx-auto">
+        <div class="bg-[#f9f1e2] rounded-lg shadow overflow-hidden text-center w-80 h-80 mx-auto flex flex-col">
+          <h3 class="text-xl text-center font-bold text-gray-900 mb-2 mt-2">Zeitleiste</h3>
+          <img src="/images/Neues_Theater4.jpg" alt="Neues Theater" class="w-full h-64 object-cover"/>
+          <div class="flex justify-end mt-1 px-2">
+            <span class="text-xs text-gray-500">© Quelle: Privatsammlung Schmitt</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="grid gap-8 grid-cols-2 justify-center mx-auto max-w-[calc(2*20rem+8rem)] mb-8">
+      <a href="/kino" class="block mx-auto">
+        <div class="bg-[#f9f1e2] rounded-lg shadow overflow-hidden text-center w-80 h-80 flex flex-col">
+          <h3 class="text-xl text-center font-bold text-gray-900 mb-2 mt-2">Kinos</h3>
+          <img src="/images/Apollo-Theater-Aussenansicht.jpg" alt="Apollo" class="w-full h-64 object-cover"/>
+          <div class="flex justify-end mt-1 px-2">
+            <span class="text-xs text-gray-500">© Quelle: Privatsammlung Schmitt/Kotschka</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/kinobetreiber" class="block mx-auto">
+        <div class="bg-[#f9f1e2] rounded-lg shadow overflow-hidden text-center w-80 h-80 flex flex-col">
+          <h3 class="text-xl text-center font-bold text-gray-900 mb-2 mt-2">Kinobetreiber</h3>
+          <img src="/images/Filmtheater_001bearb.jpg" 
+               alt="Parade-Theater" 
+               class="w-full h-64 object-cover object-bottom"/>
+          <div class="flex justify-end mt-1 px-2">
+            <span class="text-xs text-gray-500">© Quelle: Privatsammlung Kotschka</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+<section class="py-8 px-4 max-w-7xl mx-auto">
+  <h2 class="text-2xl font-bold text-center mb-4">Bildergalerie</h2>
+
+  <div class="carousel-container bg-[#f9f1e2] rounded-lg shadow mx-auto relative p-4 max-w-212.5" data-carousel>
+    <div class="carousel-inner overflow-hidden relative">
+      {carouselImages.map((img, i) => (
+        <div class={`carousel-slide ${i === 0 ? "active" : ""} text-center`}>
+          <img src={img.src} alt="" class="mx-auto h-96 w-auto object-cover rounded-lg" />
+          {img.copyright && (
+          <div class="text-xs text-gray-500 text-right mt-1 px-1">
+            {img.copyright && (
+              <div class="text-xs text-gray-500 text-right mt-1 px-1">
+                <span>© {img.copyright}</span>
+              </div>
+            )}
+          </div>
+        )}
+        </div>
+      ))}
+    </div>
+
+    {/* Pfeile */}
+    <button class="carousel-arrow left absolute top-1/2 -translate-y-1/2 left-0 z-20 text-2xl font-bold bg-white/60 rounded-full w-9 h-9 flex items-center justify-center" data-prev>‹</button>
+    <button class="carousel-arrow right absolute top-1/2 -translate-y-1/2 right-0 z-20 text-2xl font-bold bg-white/60 rounded-full w-9 h-9 flex items-center justify-center" data-next>›</button>
+
+    {/* Punkte */}
+    <div class="carousel-dots flex justify-center gap-2 mt-4">
+      {carouselImages.map((_, i) => (
+        <button class={`dot ${i === 0 ? "active" : ""}`} data-dot={i}></button>
+      ))}
+    </div>
+  </div>
+
+  <script is:inline>
+  (() => {
+    const carousel = document.querySelector('[data-carousel]');
+    if (!carousel) return;
+
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.dot');
+    let index = 0;
+
+    function show(i) {
+      slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+      dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+      index = i;
+    }
+
+    carousel.querySelector('[data-next]')?.addEventListener('click', () =>
+      show((index + 1) % slides.length)
+    );
+
+    carousel.querySelector('[data-prev]')?.addEventListener('click', () =>
+      show((index - 1 + slides.length) % slides.length)
+    );
+
+    dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+  })();
+  </script>
+
+
+
+  <style>
+  .carousel-container { position: relative; max-width: 850px; margin: auto; }
+  .carousel-inner { position: relative; overflow: hidden; }
+  .carousel-slide { display: none; text-align: center; }
+  .carousel-slide.active { display: block; }
+  .carousel-slide img { height: 24rem; width: auto; border-radius: 6px; display: inline-block; }
+
+  /* Pfeile */
+  .carousel-arrow {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; height: 40px; /* leicht größer */
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+  }
+  .carousel-arrow.left { left: 25px; }  /* etwas vom Rand nach innen */
+  .carousel-arrow.right { right: 25px; } /* etwas vom Rand nach innen */
+
+  /* Punkte */
+  .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
+  .carousel-dots .dot { width: 10px; height: 10px; border-radius: 50%; background: #ccc; border: none; cursor: pointer; }
+  .carousel-dots .dot.active { background: #000; }
+
+  /* Copyright unter den Bildern */
+  .carousel-slide .carousel-caption {
+    font-size: 12px;
+    text-align: right;
+    margin-top: 4px;
+    color: #555;
+  }
+</style>
+
+</section>
+
+</Layout>
+

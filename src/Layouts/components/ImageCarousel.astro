@@ -1,0 +1,132 @@
+---
+interface Image {
+  src: string;
+  copyright?: string;
+  sourceId?: string;
+}
+
+const images = Astro.props.images as Image[] | undefined;
+if (!images || images.length === 0) return;
+---
+
+<div
+  class="carousel-container bg-[#f9f1e2] rounded-lg shadow mx-auto p-4 max-w-212.5"
+  data-carousel={images.length > 1 ? true : undefined}
+>
+  <div class="carousel-inner overflow-hidden">
+    {images.map((img, i) => (
+      <div class={`carousel-slide ${i === 0 ? "active" : ""} text-center`}>
+        <img
+          src={img.src}
+          alt=""
+          class="mx-auto h-64 md:h-96 w-auto max-w-full rounded-lg"
+        />
+
+        {img.copyright && (
+          <div class="text-xs text-gray-500 text-right mt-1 px-1">
+            {img.sourceId ? (
+              <a href={`#license-${img.sourceId}`} class="underline">
+                © {img.copyright}
+              </a>
+            ) : (
+              <span>© {img.copyright}</span>
+            )}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+
+  {images.length > 1 && (
+    <>
+      <button class="carousel-arrow left" data-prev aria-label="Vorheriges Bild">‹</button>
+      <button class="carousel-arrow right" data-next aria-label="Nächstes Bild">›</button>
+
+      <div class="carousel-dots">
+        {images.map((_, i) => (
+          <button
+            class={`dot ${i === 0 ? "active" : ""}`}
+            data-dot={i}
+            aria-label={`Bild ${i + 1}`}
+          />
+        ))}
+      </div>
+    </>
+  )}
+</div>
+
+<style>
+.carousel-container {
+  position: relative;
+}
+
+/* Slides */
+.carousel-slide { display: none; }
+.carousel-slide.active { display: block; }
+
+/* Pfeile */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.75);
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-arrow.left { left: 10px; }
+.carousel-arrow.right { right: 10px; }
+
+/* Punkte */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.dot.active { background: #000; }
+</style>
+
+<script>
+(() => {
+  const carousel = document.querySelector('[data-carousel]');
+  if (!carousel) return;
+
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const dots = carousel.querySelectorAll('.dot');
+  let index = 0;
+
+function show(i: number) {
+  slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+  dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+  index = i;
+}
+
+  carousel.querySelector('[data-next]')?.addEventListener('click', () =>
+    show((index + 1) % slides.length)
+  );
+
+  carousel.querySelector('[data-prev]')?.addEventListener('click', () =>
+    show((index - 1 + slides.length) % slides.length)
+  );
+
+  dots.forEach((dot, i) =>
+    dot.addEventListener('click', () => show(i))
+  );
+})();
+</script>

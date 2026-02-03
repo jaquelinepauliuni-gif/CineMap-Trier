@@ -1,0 +1,33 @@
+---
+const { data } = Astro.props as { data: Record<string, string> };
+---
+
+<table class="w-full text-sm border border-gray-300 shadow rounded-lg overflow-hidden">
+  <tbody>
+    {Object.entries(data).map(([key, value], i, arr) => (
+      <tr>
+        <th
+          style="padding-left: calc(0.5rem + 4px)" class={`text-left p-2 font-medium bg-[#fbf5e9] w-1/4 border-r border-b border-gray-300 ${
+            i === 0 ? 'rounded-tl-lg' : ''
+          } ${i === arr.length - 1 ? 'rounded-bl-lg' : ''}`}
+        >
+          {key}
+        </th>
+        <td style="padding-left: calc(0.5rem + 4px)"
+          class={`p-2 bg-[#fbf5e9] border-b border-gray-300 ${
+            i === 0 ? 'rounded-tr-lg' : ''
+          } ${i === arr.length - 1 ? 'rounded-br-lg' : ''}`}
+        >
+          {value}
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+<style>
+  table {
+    border-collapse: separate; /* unbedingt für abgerundete Ecken */
+    border-spacing: 0;
+  }
+</style>

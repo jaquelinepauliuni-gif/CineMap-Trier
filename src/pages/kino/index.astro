@@ -1,0 +1,29 @@
+---
+import Layout from "../../Layouts/layout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import Filmstrip from "../../Layouts/components/Filmstrip.astro";
+
+const kino: CollectionEntry<"kino">[] = await getCollection("kino");
+
+// Alphabetisch sortieren
+kino.sort((a, b) => (a.data.name ?? "").localeCompare(b.data.name ?? ""));
+---
+
+<Layout>
+  <h1 class="text-5xl font-bold mb-8">Kinos</h1>
+
+  <section>
+    <div class="px-4 mx-auto max-w-7xl">
+      <div class="grid gap-8 md:grid-cols-3">
+        {kino.map((k) => (
+          <Filmstrip
+              href={`/kino/${k.slug}`}
+              title={k.data.name}
+              subtitle={k.data.years}
+              image={k.data.images?.[0]?.src ?? "/images/dunkel.png"}
+            />
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,77 @@
+---
+const startYear = 1907;
+const currentYear = new Date().getFullYear();
+const yearsPassed = currentYear - startYear;
+
+// Array der Counter
+const counters = [
+  { label: "Kinos", endValue: 26 },
+  { label: "Besitzer*innen", endValue: 15 },
+  { label: "Jahre", endValue: yearsPassed }
+];
+---
+
+<div class="counters">
+  {counters.map((c, index) => (
+    <div class="counter-item" id={`counter-${index}`}>
+      <span class="number">0</span>
+      <span class="label">{c.label}</span>
+    </div>
+  ))}
+</div>
+
+<style>
+  .counters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .counter-item {
+    text-align: center;
+    min-width: 120px;
+    font-family: "Crimson Text", serif;
+  }
+  .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+    font-family: "Crimson Text", serif;
+  }
+  .label {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+</style>
+
+<script type="module">
+  const counters = [
+    { id: "counter-0", endValue: 26 },
+    { id: "counter-1", endValue: 15 },
+    { id: "counter-2", endValue: new Date().getFullYear() - 1907 }
+  ];
+
+  counters.forEach(c => {
+    const el = document.getElementById(c.id).querySelector(".number");
+    let started = false;
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !started) {
+        started = true;
+        let i = 0;
+        const duration = 1500; 
+        const stepTime = Math.max(Math.floor(duration / c.endValue), 10);
+
+        const timer = setInterval(() => {
+          i++;
+          el.textContent = i;
+          if (i >= c.endValue) clearInterval(timer);
+        }, stepTime);
+      }
+    });
+
+    observer.observe(el);
+  });
+</script>
