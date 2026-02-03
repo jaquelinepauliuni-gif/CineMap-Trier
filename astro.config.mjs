@@ -1,18 +1,19 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+import remarkGfm from 'remark-gfm';
 
 export default defineConfig({
   site: 'https://jaquelinepauliuni-gif.github.io',
-  base: '/CineMap-Trier/',
+  base: '/CineMap-Trier',
+
+  // optional, aber ok:
+  trailingSlash: 'always',
+
+  markdown: {
+    remarkPlugins: [remarkGfm],
+  },
+
   vite: {
-    plugins: [
-      tailwindcss(),
-      {
-        name: 'replace-root-links',
-        transformIndexHtml(html) {
-          return html.replace(/(href|src)="\//g, `$1="${'/CineMap-Trier/'}`);
-        },
-      },
-    ],
+    plugins: [tailwindcss()],
   },
 });
