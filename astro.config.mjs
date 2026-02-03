@@ -1,11 +1,18 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://jaquelinepauliuni-gif.github.io', // dein GitHub URL
-  base: '/CineMap-Trier/', // Name deines Repos
+  site: 'https://jaquelinepauliuni-gif.github.io',
+  base: '/CineMap-Trier/',
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [
+      tailwindcss(),
+      {
+        name: 'replace-root-links',
+        transformIndexHtml(html) {
+          return html.replace(/(href|src)="\//g, `$1="${'/CineMap-Trier/'}`);
+        },
+      },
+    ],
+  },
 });
