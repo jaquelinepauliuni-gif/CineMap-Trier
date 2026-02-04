@@ -5,13 +5,15 @@ import Navigation from "./components/navigation.astro";
 import Footer from "./components/footer.astro";
 
 const { fullWidth = false } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const withBase = (p: string) => (p.startsWith("/") ? base.replace(/\/$/, "") + p : p);
 ---
 
 <html lang="de">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/images/dunkel.png" />
-        <link rel="stylesheet" href="/src/styles/global.css" />
+		<link rel="icon" type="image/png" href={withBase("/images/dunkel.png")} />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

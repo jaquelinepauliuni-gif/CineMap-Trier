@@ -7,6 +7,9 @@ interface Image {
 
 const images = Astro.props.images as Image[] | undefined;
 if (!images || images.length === 0) return;
+
+const base = import.meta.env.BASE_URL;
+const withBase = (p: string) => (p.startsWith("/") ? base.replace(/\/$/, "") + p : p);
 ---
 
 <div
@@ -17,7 +20,7 @@ if (!images || images.length === 0) return;
     {images.map((img, i) => (
       <div class={`carousel-slide ${i === 0 ? "active" : ""} text-center`}>
         <img
-          src={img.src}
+          src={withBase(img.src)}
           alt=""
           class="mx-auto h-64 md:h-96 w-auto max-w-full rounded-lg"
         />

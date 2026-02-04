@@ -127,10 +127,11 @@ h2 {
       font-size: 16px;
     }
   }
+}
 
 @layer utilities {
   .font-crimson {
     font-family: "Crimson Text", serif;
   }
 }
-}
+

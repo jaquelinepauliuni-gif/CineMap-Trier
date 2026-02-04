@@ -31,7 +31,7 @@ sources:
 
 ---
 
-Die „Flimmerkiste“ am Margaretengäßchen 2a war von 1971 bis 1997 ein fester Bestandteil der städtischen Kinolandschaft <sup><a href="#source-1">1</a></sup>. Sie versuchte, im Vergleich zu den Mainstream Kinos <a href="/kino/atrium">Atrium</a> und <a href="/kino/capitol">Capitol</a>, einen Ausgleich zwischen einem reinen Programmkinoangebot und Unterhaltungsfilmen zu schaffen <sup><a href="#source-4">4</a></sup>. Vorwiegend wurden deutsche und europäische Filme vorgeführt <sup><a href="#source-4">4</a></sup>.
+Die „Flimmerkiste“ am Margaretengäßchen 2a war von 1971 bis 1997 ein fester Bestandteil der städtischen Kinolandschaft <sup><a href="#source-1">1</a></sup>. Sie versuchte, im Vergleich zu den Mainstream Kinos <a href="/CineMap-Trier/kino/atrium">Atrium</a> und <a href="/CineMap-Trier/kino/capitol">Capitol</a>, einen Ausgleich zwischen einem reinen Programmkinoangebot und Unterhaltungsfilmen zu schaffen <sup><a href="#source-4">4</a></sup>. Vorwiegend wurden deutsche und europäische Filme vorgeführt <sup><a href="#source-4">4</a></sup>.
 
 Sie verfügte über insgesamt drei Säle mit 375 Plätzen, deren Kapazität sich im Laufe der Jahre veränderte <sup><a href="#source-2">2</a></sup> <sup><a href="#source-3">3</a></sup>. Zuerst hatte die Flimmerkiste noch eine  geringere Fassungskraft, bevor gegen Ende das Kino erweitert wurde: Saal 1 bot nun 110 Plätze (zuvor 90), Saal 2 165 Plätze (zuvor 120) und Saal 3 100 Plätze (zuvor 70) <sup><a href="#source-2">2</a></sup> <sup><a href="#source-3">3</a></sup>.
 

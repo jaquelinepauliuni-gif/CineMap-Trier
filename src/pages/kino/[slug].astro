@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   const entries = await getCollection("kino");
 
   return entries.map((entry: CollectionEntry<"kino">) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id.replace(/\.(md|mdx)$/, "") },
     props: { entry },
   }));
 }
@@ -21,9 +21,13 @@ interface Props {
 
 const { entry } = Astro.props as Props;
 
-const { Content } = await entry.render();
-const hasImages = entry.data.images?.length > 0;
+const hasImages = (entry.data.images?.length ?? 0) > 0;
 const hasVideo = Boolean(entry.data.video);
+
+const base = import.meta.env.BASE_URL;
+const withBase = (p: string) => (p.startsWith("/") ? base.replace(/\/$/, "") + p : p);
+
+const html = entry.rendered?.html ?? "";
 ---
 
 <Layout>
@@ -33,40 +37,39 @@ const hasVideo = Boolean(entry.data.video);
     <div>
       <section class="grid md:grid-cols-2 gap-8 items-start">
         <div>
+          <!-- WICHTIG: NICHT vorher /CineMap-Trier prefixen -->
           <ImageCarousel images={entry.data.images} />
         </div>
+
         <div class="w-full">
           <InfoTable data={entry.data.table} />
-        
-        {hasVideo && (
-  <div class="mt-12">
-    <video
-      src={entry.data.video.src}
-      controls
-      class="mx-auto w-full max-w-md rounded-lg shadow"
-    />
 
-    {entry.data.video.copyright && (
-      <div class="mt-1 text-xs text-gray-500 text-center">
-        {entry.data.video.sourceId ? (
-          <a
-            href={`#license-${entry.data.video.sourceId}`}
-            class="underline"
-          >
-            © {entry.data.video.copyright}
-          </a>
-        ) : (
-          <span>© {entry.data.video.copyright}</span>
-        )}
-      </div>
-    )}
-  </div>
-)}
+          {hasVideo && (
+            <div class="mt-12">
+              <video
+                src={withBase(entry.data.video.src)}
+                controls
+                class="mx-auto w-full max-w-md rounded-lg shadow"
+              />
 
+              {entry.data.video.copyright && (
+                <div class="mt-1 text-xs text-gray-500 text-center">
+                  {entry.data.video.sourceId ? (
+                    <a href={`#license-${entry.data.video.sourceId}`} class="underline">
+                      © {entry.data.video.copyright}
+                    </a>
+                  ) : (
+                    <span>© {entry.data.video.copyright}</span>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </section>
+
       <div class="mt-12 prose max-w-none">
-        <Content />
+        <Fragment set:html={html} />
       </div>
     </div>
   ) : (
@@ -75,7 +78,7 @@ const hasVideo = Boolean(entry.data.video);
         <InfoTable data={entry.data.table} />
       </div>
       <div class="prose max-w-none">
-        <Content />
+        <Fragment set:html={html} />
       </div>
     </div>
   )}

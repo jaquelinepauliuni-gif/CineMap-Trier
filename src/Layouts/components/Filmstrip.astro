@@ -1,18 +1,20 @@
 ---
 const { href, title, subtitle, image } = Astro.props;
 
-// Prüfen, ob es sich um den Fallback handelt
+const base = import.meta.env.BASE_URL;
+const withBase = (p: string) => (p.startsWith("/") ? base.replace(/\/$/, "") + p : p);
+
 const isPlaceholder = image === "/images/dunkel.png";
+const imgSrc = typeof image === "string" ? withBase(image) : image;
+const linkHref = typeof href === "string" ? withBase(href) : href;
 ---
 
-<a href={href} class="filmstrip">
+<a href={linkHref} class="filmstrip">
   <div class="filmstrip-inner">
     <img
-      src={image}
+      src={imgSrc}
       alt={title}
-      class={isPlaceholder
-        ? "placeholder-img"
-        : "filmstrip-img"}
+      class={isPlaceholder ? "placeholder-img" : "filmstrip-img"}
     />
   </div>
 

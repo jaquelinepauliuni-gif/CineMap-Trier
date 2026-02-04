@@ -52,6 +52,6 @@ In den dreißig Jahren nach seiner Eröffnung wurde das Gloria von verschiedenen
 <br><br>
 Das Royal Kino wurde als Nachfolger des Gloria Theaters eröffnet. Im Zuge der Neugestaltung wurde die Kapazität des Kinos, das ursprünglich 450 Plätze umfasste, auf circa 394 Sitze reduziert (1998/99) <sup><a href="#source-6">6</a></sup>. Das Filmprogramm richtete sich neu aus, um verstärkt ein jüngeres Publikum anzusprechen <sup><a href="#source-5">5</a></sup>.
 <br><br>
-Im Jahr 1997 übernahm <a href="/kinobetreiber/ziesenhenne">Dirk Ziesenhenne</a> den Betrieb <sup><a href="#source-7">7</a></sup>. Nur drei Jahre später, im Jahr 2000, musste das Royal schließen. Der Hauptgrund war die zeitgleiche Eröffnung des konkurrierenden <a href="/kino/cinemaxx">Multiplex-Kinos (CinemaxX)</a> im Trierer Stadtzentrum, welche die Wirtschaftlichkeit des Royal-Kinos massiv beeinträchtigten <sup><a href="#source-8">8</a></sup>.
+Im Jahr 1997 übernahm <a href="/CineMap-Trier/kinobetreiber/ziesenhenne">Dirk Ziesenhenne</a> den Betrieb <sup><a href="#source-7">7</a></sup>. Nur drei Jahre später, im Jahr 2000, musste das Royal schließen. Der Hauptgrund war die zeitgleiche Eröffnung des konkurrierenden <a href="/CineMap-Trier/kino/cinemaxx">Multiplex-Kinos (CinemaxX)</a> im Trierer Stadtzentrum, welche die Wirtschaftlichkeit des Royal-Kinos massiv beeinträchtigten <sup><a href="#source-8">8</a></sup>.
 <br><br>
 Heute zeugt lediglich der Schriftzug an der Fassade noch von seiner cineastischen Vergangenheit; an seiner Stelle befindet sich eine Schneiderei.

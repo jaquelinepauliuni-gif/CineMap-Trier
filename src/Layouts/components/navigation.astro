@@ -2,28 +2,43 @@
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
-const kinos: CollectionEntry<"kino">[] = (await getCollection("kino"))
-  .sort((a: CollectionEntry<"kino">, b: CollectionEntry<"kino">) =>
-    a.data.name.localeCompare(b.data.name, "de")
-  );
+const base = import.meta.env.BASE_URL; // lokal: "/" | GH Pages: "/CineMap-Trier/"
 
-const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (await getCollection("kinobetreiber"))
-  .sort((a: CollectionEntry<"kinobetreiber">, b: CollectionEntry<"kinobetreiber">) =>
+// Prefixe absolute interne Pfade mit BASE_URL
+const withBase = (p: string) =>
+  p.startsWith("/") ? base.replace(/\/$/, "") + p : p;
+
+// Slug aus entry.id ableiten (z.B. "foo/bar.md" -> "bar")
+const slugFromId = (e: { id: string }) => {
+  const s = e.id.replace(/\\/g, "/");
+  const last = s.split("/").pop() ?? s;
+  return last.replace(/\.[^.]+$/, "");
+};
+
+const kinos: CollectionEntry<"kino">[] = (await getCollection("kino")).sort(
+  (a: CollectionEntry<"kino">, b: CollectionEntry<"kino">) =>
     a.data.name.localeCompare(b.data.name, "de")
-  );
+);
+
+const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (
+  await getCollection("kinobetreiber")
+).sort(
+  (a: CollectionEntry<"kinobetreiber">, b: CollectionEntry<"kinobetreiber">) =>
+    a.data.name.localeCompare(b.data.name, "de")
+);
 ---
+
 <nav class="bg-[#460000] shadow antialiased md:static sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex items-center min-h-20 pl-0 pr-4 px-4">
-
     <!-- LOGO -->
-    <a href="/" class="shrink-0 mr-16">
+    <a href={withBase("/")} class="shrink-0 mr-16">
       <img
-        src="/images/hell.png"
+        src={withBase("/images/hell.png")}
         alt="CineMap Logo"
         class="h-28 py-2 w-auto"
       />
     </a>
-    
+
     <button
       id="mobile-menu-button"
       class="md:hidden text-white ml-auto p-2 focus:outline-none"
@@ -32,37 +47,36 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (await getCollection("
       <span id="burger-icon" class="block text-3xl leading-none">☰</span>
     </button>
 
-
     <ul
       class="hidden md:flex gap-2 text-white ml-auto"
       style='font-family: "Crimson Text", serif;'
     >
-      <li><a href="/" class="nav-link">Home</a></li>
-      <li><a href="/geschichte" class="nav-link">Geschichte</a></li>
+      <li><a href={withBase("/")} class="nav-link">Home</a></li>
+      <li><a href={withBase("/geschichte")} class="nav-link">Geschichte</a></li>
 
       <li class="relative group">
-        <a href="/kino" class="nav-link flex items-center gap-1">
+        <a href={withBase("/kino")} class="nav-link flex items-center gap-1">
           Kinos <span class="dropdown-arrow">▾</span>
         </a>
 
         <ul class="dropdown">
           {kinos.map((kino: CollectionEntry<"kino">) => (
             <li>
-              <a href={`/kino/${kino.slug}`}>{kino.data.name}</a>
+              <a href={withBase(`/kino/${slugFromId(kino)}`)}>{kino.data.name}</a>
             </li>
           ))}
         </ul>
       </li>
 
       <li class="relative group">
-        <a href="/kinobetreiber" class="nav-link flex items-center gap-1">
+        <a href={withBase("/kinobetreiber")} class="nav-link flex items-center gap-1">
           Betreiber <span class="dropdown-arrow">▾</span>
         </a>
 
         <ul class="dropdown">
           {kinobetreiber.map((b: CollectionEntry<"kinobetreiber">) => (
             <li>
-              <a href={`/kinobetreiber/${b.slug}`}>{b.data.name}</a>
+              <a href={withBase(`/kinobetreiber/${slugFromId(b)}`)}>{b.data.name}</a>
             </li>
           ))}
         </ul>
@@ -74,8 +88,8 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (await getCollection("
         </span>
 
         <ul class="dropdown">
-          <li><a href="/karte">Karte</a></li>
-          <li><a href="/zeitleiste">Zeitleiste</a></li>
+          <li><a href={withBase("/karte")}>Karte</a></li>
+          <li><a href={withBase("/zeitleiste")}>Zeitleiste</a></li>
         </ul>
       </li>
 
@@ -85,9 +99,9 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (await getCollection("
         </span>
 
         <ul class="dropdown">
-          <li><a href="/projekt">Projekt</a></li>
-          <li><a href="/methoden">Methoden</a></li>
-          <li><a href="/team">Team</a></li>
+          <li><a href={withBase("/projekt")}>Projekt</a></li>
+          <li><a href={withBase("/methoden")}>Methoden</a></li>
+          <li><a href={withBase("/team")}>Team</a></li>
         </ul>
       </li>
     </ul>
@@ -100,38 +114,37 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (await getCollection("
   style='font-family: "Crimson Text", serif;'
 >
   <ul class="space-y-2">
-    <li><a href="/" class="block py-2">Home</a></li>
-    <li><a href="/geschichte" class="block py-2">Geschichte</a></li>
+    <li><a href={withBase("/")} class="block py-2">Home</a></li>
+    <li><a href={withBase("/geschichte")} class="block py-2">Geschichte</a></li>
 
     <li class="pt-2 font-semibold">Kinos</li>
-    {kinos.map((kino) => (
+    {kinos.map((kino: CollectionEntry<"kino">) => (
       <li class="pl-4">
-        <a href={`/kino/${kino.slug}`} class="block py-1">
+        <a href={withBase(`/kino/${slugFromId(kino)}`)} class="block py-1">
           {kino.data.name}
         </a>
       </li>
     ))}
 
     <li class="pt-2 font-semibold">Betreiber</li>
-    {kinobetreiber.map((b) => (
+    {kinobetreiber.map((b: CollectionEntry<"kinobetreiber">) => (
       <li class="pl-4">
-        <a href={`/kinobetreiber/${b.slug}`} class="block py-1">
+        <a href={withBase(`/kinobetreiber/${slugFromId(b)}`)} class="block py-1">
           {b.data.name}
         </a>
       </li>
     ))}
 
     <li class="pt-2 font-semibold">Karte</li>
-    <li class="pl-4"><a href="/karte">Karte</a></li>
-    <li class="pl-4"><a href="/zeitleiste">Zeitleiste</a></li>
+    <li class="pl-4"><a href={withBase("/karte")}>Karte</a></li>
+    <li class="pl-4"><a href={withBase("/zeitleiste")}>Zeitleiste</a></li>
 
     <li class="pt-2 font-semibold">Über Uns</li>
-    <li class="pl-4"><a href="/projekt">Projekt</a></li>
-    <li class="pl-4"><a href="/methoden">Methoden</a></li>
-    <li class="pl-4"><a href="/team">Team</a></li>
+    <li class="pl-4"><a href={withBase("/projekt")}>Projekt</a></li>
+    <li class="pl-4"><a href={withBase("/methoden")}>Methoden</a></li>
+    <li class="pl-4"><a href={withBase("/team")}>Team</a></li>
   </ul>
 </div>
-
 
 <style>
 .nav-link {
@@ -155,8 +168,8 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (await getCollection("
   top: 100%;
   left: 0;
   min-width: 220px;
-  max-height: 68vh;     
-  overflow-y: auto;     
+  max-height: 68vh;
+  overflow-y: auto;
   background: white;
   color: #460000;
   border-radius: 0.75rem;
@@ -205,6 +218,3 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (await getCollection("
     });
   }
 </script>
-
-
-

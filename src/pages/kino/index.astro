@@ -17,11 +17,16 @@ kino.sort((a, b) => (a.data.name ?? "").localeCompare(b.data.name ?? ""));
       <div class="grid gap-8 md:grid-cols-3">
         {kino.map((k) => (
           <Filmstrip
-              href={`/kino/${k.slug}`}
-              title={k.data.name}
-              subtitle={k.data.years}
-              image={k.data.images?.[0]?.src ?? "/images/dunkel.png"}
-            />
+  href={`/CineMap-Trier/kino/${k.id.replace(/\.(md|mdx)$/, "")}/`}
+  title={k.data.name}
+  subtitle={k.data.years}
+  image={
+    k.data.images?.[0]?.src
+      ? `/CineMap-Trier${k.data.images[0].src}`
+      : "/CineMap-Trier/images/dunkel.png"
+  }
+/>
+
         ))}
       </div>
     </div>

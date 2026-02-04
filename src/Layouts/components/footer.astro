@@ -1,19 +1,22 @@
 ---
+const base = import.meta.env.BASE_URL;
+const withBase = (p: string) => (p.startsWith("/") ? base.replace(/\/$/, "") + p : p);
 ---
+
 <footer class="bg-[#460000] shadow flex items-center justify-between py-6 px-6 antialiased pl-10 pr-10">
   <p class="mb-4 text-sm text-white sm:mb-0 flex flex-col gap-2">
-  <a href="/CineMap-Trier/impressum/">Impressum</a>
-  <a href="/CineMap-Trier/datenschutz/">Datenschutzerklärung</a>
-</p>
+    <a href={withBase("/impressum")}>Impressum</a>
+    <a href={withBase("/datenschutz")}>Datenschutzerklärung</a>
+  </p>
 
   <p class="mb-4 text-center text-white sm:mb-0 text-sm">
     &copy; Copyright. All rights reserved.
   </p>
 
   <div class="flex justify-center items-center">
-    <a href="/CineMap-Trier/" class="flex items-center hover:opacity-80 transition">
+    <a href={withBase("/")} class="flex items-center hover:opacity-80 transition">
       <img
-        src="/CineMap-Trier/images/hell.png"
+        src={withBase("/images/hell.png")}
         alt="CineMap Logo"
         class="h-15 w-auto"
       />
