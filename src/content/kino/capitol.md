@@ -48,7 +48,7 @@ sources:
 #### Gründung 
 
 Ende 1937 entstand in der Brotstraße 24 das Kino Capitol, ein modernes Lichtspielhaus, das an der Stelle des traditionsreichen Trierischen Hofes errichtet wurde <sup><a href="#source-1">1</a></sup>. Dabei ging der ursprüngliche Platzcharakter verloren: Der Eingang zur Brotstraße wurde neu angelegt und die gesamte Vorderfront im Stil des Dritten Reiches gestaltet <sup><a href="#source-2">2</a></sup>. 
-
+<br><br>
 Der erste Film, der im Capitol gezeigt wurde, war „Zu neuen Ufern“ <sup><a href="#source-1">1</a></sup>. Bei der Premiere erschienen einige Schauspieler:innen persönlich, darunter auch die bekannte Zarah Leander <sup><a href="#source-5">5</a></sup>.
 <br><br>
 
@@ -59,13 +59,14 @@ Innere Ausstattung des Capitols entsprach den modernsten Anforderungen. Durch ho
 
 #### Technische Ausstattung
 
-Die technischen Einrichtungen lagen auf dem neuesten Stand der Industrie. Ein moderner Vorführraum war mit zwei Apparaten jüngster Konstruktion ausgestattet; eine automatische Schaltvorrichtung sicherte gegen Störungen ab <sup><a href="#source-1">1</a></sup>. Die Apparatur war für Farbfilme gut geeignet <sup><a href="#source-1">1</a></sup>. Akustik wurde durch Heraklitplatten gewährleistet, und der Velourstoff in stimmungsvoller roter Farbe fungierte tonabsorbierend <sup><a href="#source-1">1</a></sup>. Für Schwerhörige standen Kopfhörer zur Verfügung, die eigenständig reguliert werden konnten <sup><a href="#source-1">1</a></sup>. Ein großer Luftschutzraum erstreckte sich unter dem gesamten Gebäude; zudem verfügte das Lichtspielhaus über eine ausreichende Anzahl von Notausgängen <sup><a href="#source-1">1</a></sup>. 
-Betrieb
+Die technischen Einrichtungen lagen auf dem neuesten Stand der Industrie. Ein moderner Vorführraum war mit zwei Apparaten jüngster Konstruktion ausgestattet; eine automatische Schaltvorrichtung sicherte gegen Störungen ab <sup><a href="#source-1">1</a></sup>. Die Apparatur war für Farbfilme gut geeignet <sup><a href="#source-1">1</a></sup>. Akustik wurde durch Heraklitplatten gewährleistet, und der Velourstoff in stimmungsvoller roter Farbe fungierte tonabsorbierend <sup><a href="#source-1">1</a></sup>. Für Schwerhörige standen Kopfhörer zur Verfügung, die eigenständig reguliert werden konnten <sup><a href="#source-1">1</a></sup>. Ein großer Luftschutzraum erstreckte sich unter dem gesamten Gebäude; zudem verfügte das Lichtspielhaus über eine ausreichende Anzahl von Notausgängen <sup><a href="#source-1">1</a></sup>. <br><br>
+
+#### Betrieb
 
 Die Betriebsgesellschaft Volmerg & Co. führte das Capitol mit dem Ziel, es zu einem richtigen Kino-Zentrum auszubauen <sup><a href="#source-3">3</a></sup>. Der Hauptsaal „Rex“ bot 520 Sitzplätze <sup><a href="#source-3">3</a></sup>. Hinzu kam der Saal „Bambi“ mit 120 Plätzen, das 1961 das erste Trierer Raucherkino wurde <sup><a href="#source-3">3</a></sup>.
-
+<br><br>
 Die Expansion führte 1977 zur Eröffnung eines dritten Saals <sup><a href="#source-3">3</a></sup>. Die „Katakombe“ in den Kellerräumen des Capitols sollte als „Wohnzimmertheater“ konzipiert sein, in dem Besucher gemütlich in Stuhlsesseln Filme anschauen konnten <sup><a href="#source-3">3</a></sup>. Eine Theke mit Snacks und Getränken ergänzte das Angebot <sup><a href="#source-3">3</a></sup>. Der Saal war rustikal ausgestattet mit Fachwerkmauerelementen und Bildern von römischen Fundgegenständen <sup><a href="#source-3">3</a></sup>. Mit 60 Sitzplätzen war die „Katakombe“ das kleinste Kino des Kinozentrums <sup><a href="#source-3">3</a></sup>. Insgesamt konnten 700 Besucher gleichzeitig im Kino-Center Capitol untergebracht werden.
-
+<br><br>
 Die Programmstrategie war differenziert: Während Action-Filme, Familienprogramme sowie Kassenfüller in den größeren Sälen „Bambi“ und „Rex“ gezeigt wurden, präsentierte sich die „Katakombe“ als Ort für Filme gehobener Ebene, etwa „Dr. Schiwago“ <sup><a href="#source-3">3</a></sup>. Der erste Film in der Katakombe war „Der Adler ist gelandet“ <sup><a href="#source-3">3</a></sup>. Insgesamt war das Capitol eine echte Bereicherung für das städtische Kulturleben.
 <br><br>
 

@@ -32,9 +32,9 @@ sources:
 
 Das CinemaxX Trier an der Moselstraße 17 öffnete am 15. Februar 2000 als Multiplex-Kino seine Türen <sup><a href="#source-1">1</a></sup>. Errichtet wurde das Großkino als Projekt der Caritas Trägergesellschaft Trier (ctt) bzw. ihrer Tochter Klinik Rose AG, die als Bauherrin auftrat <sup><a href="#source-1">1</a></sup>. Das Multiplex ersetzte eine Reihe historischer Gebäude, die zuvor das Straßenbild der Moselstraße geprägt hatten, aber im Zuge der ambitionierten Bauplanung weichen mussten <sup><a href="#source-1">1</a></sup>. Die Eröffnung wurde durch den Skandal um den damaligen ctt-Manager überschattet. Kurz vor der Eröffnung des Kinos war er wegen Untreue-Vorwürfen verhaftet und zu einer Haftstrafe von zehneinhalb Jahren verurteilt worden <sup><a href="#source-1">1</a></sup>.
 Der moderne Kinokomplex hatte bei der Eröffnung im Jahr 2000 insgesamt 1818 Sitzplätze <sup><a href="#source-2">2</a></sup>. In sieben Sälen bot er Technik auf zeitgemäßem Höchstniveau.
- 
+ <br><br>
 Im Jahr 2000 wurde Peter Henkel als Betriebsleiter genannt und Betreiber des Hauses war zu diesem Zeitpunkt die Hans-Joachim Flebbe Filmtheater GmbH & Co <sup><a href="#source-2">2</a></sup>. Die Marke CinemaxX wurde 1990 gegründet, hat ihren Sitz in Hamburg und zählt zu den bekanntesten Kinobetreibern in Deutschland (etwa 30 Standorte mit rund 257 Leinwänden). Seit 2012 ist CinemaxX Teil von Vue International <sup><a href="#source-3">3</a></sup>. Der Trierer Standort wird von Theaterleiter Bernhard Benischek betreut <sup><a href="#source-1">1</a></sup>.
- 
+ <br><br>
 Seit dem Jahr 2000 prägt das CinemaxX das kulturelle Angebot der Stadt und ist bis heute das größte Kino in Trier.
 <br><br>
 

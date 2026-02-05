@@ -96,7 +96,7 @@ Das Atrium-Kino wurde 1953 in der Maximinstraße 31 gegründet <sup><a href="#so
 #### Umbau 
 
 Nach dem Tod von <a href="/CineMap-Trier/kinobetreiber/baltes">Theo Baltes</a> im Jahr 1967 übernahm sein gleichnamiger Sohn das Atrium <sup><a href="#source-1">1</a></sup>. Als Rechtsanwalt hatte er jedoch wenig Interesse an der Weiterentwicklung des Kinos <sup><a href="#source-3">3</a></sup>, das in den Anfangsjahren einen großen Erfolg genoss <sup><a href="#source-1">1</a></sup>. 1988 übernahm <a href="/CineMap-Trier/kinobetreiber/ziesenhenne">Dirk Ziesenhenne</a> zunächst zusammen mit seinem Vater, Dieter Ziesenhenne, und später eigenständig das Theater in der Maximinstraße <sup><a href="#source-4">4</a></sup>.  Für <a href="/CineMap-Trier/kinobetreiber/ziesenhenne">Dirk Ziesenhenne</a> stellte dies eine prägende Lehrzeit dar, die den Grundstein für seinen Erfolg mit dem <a href="/CineMap-Trier/kino/broadway">Broadway-Filmtheater</a> legte <sup><a href="#source-5">5</a></sup>. 
-
+<br> <br>
 Die Übernahme 1988 war alles andere als einfach. Das Atrium war auf die Besuchermassen der 1950er Jahre ausgelegt: Die beiden Säle waren zu groß dimensioniert und blieben meist nicht einmal halb voll <sup><a href="#source-6">6</a></sup>. Aus den zwei ursprünglichen Sälen entstanden drei kleinere Säle, die eine bessere Auslastung ermöglichten <sup><a href="#source-6">6</a></sup>. Zudem wurde das Atrium in ein Raucherkino umgewandelt, was sich damals als Erfolgsrezept erwies <sup><a href="#source-6">6</a></sup>. <br><br>
 
 #### Programmstrategie 
@@ -107,6 +107,6 @@ In den Jahren unter der Leitung der Familie <a href="/CineMap-Trier/kinobetreibe
 #### Ende der Geschichte des Atrium-Kinos
 
 Die Eröffnung des Multiplex-Kinos <a href="/CineMap-Trier/kino/cinemaxx">Cinemaxx</a> in der Innenstadt im Jahr 2000 markierte das Ende des Atrium-Theaters <sup><a href="#source-8">8</a></sup>. Das neue <a href="/CineMap-Trier/kino/cinemaxx">Multiplex-Haus</a> mit seinen technischen Möglichkeiten und großem Sitzplatzangebot stellte das Atrium wirtschaftlich in Frage <sup><a href="#source-8">8</a></sup>. Gleichzeitig lief der Mietvertrag des Atriums aus <sup><a href="#source-3">3</a></sup>. Obwohl <a href="/CineMap-Trier/kinobetreiber/ziesenhenne">Ziesenhenne</a> noch Pläne zur Weiterbetreibung des Theaters hegte – unter anderem überlegte er, ein One-Dollar-Kino in den Atrium-Sälen einzurichten <sup><a href="#source-8">8</a></sup> – willigte der Vermieter nicht in eine Fortsetzung ein <sup><a href="#source-3">3</a></sup>.
-
+<br> <br>
 Der Kinosaalbau wurde abgerissen und das Gebäude einer neuen Nutzung zugeführt <sup><a href="#source-3">3</a></sup>. Damit endete die Geschichte des Atrium-Kinos. 
 
