@@ -1,5 +1,5 @@
 ---
-name: Central-Theater (Trierische Lichtspielhaus)
+name: Central-Theater (Trierisches Lichtspielhaus)
 years: "1908 – 1914"
 
 table:

@@ -47,7 +47,7 @@ table:
   Adresse: "Saarstraße 90–92"
   Ort: "Trier"
   Betreiber: "Haus Schieffer GmbH"
-  Sitzplätze: "ca. 1200"
+  Sitzplätze: "800"
 
 sources:
   - id: "1"

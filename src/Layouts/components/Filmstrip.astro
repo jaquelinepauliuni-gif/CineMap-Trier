@@ -1,21 +1,48 @@
 ---
 const { href, title, subtitle, image } = Astro.props;
 
-const base = import.meta.env.BASE_URL;
-const withBase = (p: string) => (p.startsWith("/") ? base.replace(/\/$/, "") + p : p);
+const base = import.meta.env.BASE_URL || "/";
 
-const isPlaceholder = image === "/images/dunkel.png";
-const imgSrc = typeof image === "string" ? withBase(image) : image;
-const linkHref = typeof href === "string" ? withBase(href) : href;
+// nimmt alles, gibt immer einen String zurück (oder "")
+const asString = (v: unknown) => (typeof v === "string" ? v : "");
+
+// absolute URLs nicht anfassen, base nicht doppeln, und niemals new URL() mit Schrott
+const toBasePath = (raw: unknown) => {
+  const p = asString(raw).trim();
+  if (!p) return "";
+
+  // absolute URL (http, https) oder protocol-relative (//)
+  if (/^(https?:)?\/\//.test(p)) return p;
+
+  // wenn schon base-Prefix hat: so lassen
+  if (p.startsWith(base)) return p;
+
+  // normalisieren: kein führender Slash für new URL
+  const cleaned = p.replace(/^\//, "");
+  try {
+    return new URL(cleaned, base).pathname;
+  } catch {
+    // Fallback ohne Crash
+    return base.replace(/\/$/, "") + "/" + cleaned;
+  }
+};
+
+const imgSrcRaw = toBasePath(image);
+const linkHref = toBasePath(href);
+
+// encodeURI: wichtig wegen Leerzeichen im Dateinamen
+const imgSrc = imgSrcRaw ? encodeURI(imgSrcRaw) : "";
+
+const isPlaceholder = imgSrc.includes("images/dunkel.png");
 ---
 
 <a href={linkHref} class="filmstrip">
   <div class="filmstrip-inner">
     <img
-      src={imgSrc}
-      alt={title}
-      class={isPlaceholder ? "placeholder-img" : "filmstrip-img"}
-    />
+  src={imgSrc || encodeURI(toBasePath("/images/dunkel.png"))}
+  alt={title}
+  class={isPlaceholder ? "placeholder-img" : "filmstrip-img"}
+/>
   </div>
 
   <div class="filmstrip-title font-crimson">

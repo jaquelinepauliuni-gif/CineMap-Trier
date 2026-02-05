@@ -20,14 +20,12 @@ kinobetreiber.sort((a, b) =>
       <div class="grid gap-8 md:grid-cols-3">
         {kinobetreiber.map((betreiber) => (
           <Filmstrip
-              href={`/CineMap-Trier/kinobetreiber/${betreiber.id.replace(/\.(md|mdx)$/, "")}/`}
-              title={betreiber.data.name}
-              image={
-                betreiber.data.images?.[0]?.src
-                  ? `/CineMap-Trier${betreiber.data.images[0].src}`
-                  : "/CineMap-Trier/images/dunkel.png"
-              }
-            />
+  href={`/kinobetreiber/${betreiber.id.replace(/\.(md|mdx)$/, "")}/`}
+  title={betreiber.data.name}
+  image={betreiber.data.images?.[0]?.src ?? "/images/dunkel.png"}
+/>
+
+
         ))}
       </div>
     </div>
