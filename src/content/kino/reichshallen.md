@@ -1,6 +1,6 @@
 ---
 name: Reichshallen-Lichtspiele (Neues Theater)
-years: "1910 –"
+years: "1910 – 1974"
 
 images:
   - src: "/images/Neues_Theater.jpg"
@@ -45,7 +45,7 @@ licenses:
     text: "Privatfoto: Qingbo Qiao"
 
 table:
-  Öffnungsjahre: "1910 –"
+  Öffnungsjahre: "1910 – 1974"
   Adresse: "Simeonstraße 47"
   Ort: "Trier"
   Betreiber: "Peter Marzen, später Schneider"
@@ -72,6 +72,13 @@ sources:
     text: "Haller, A. (2009). Weibliches Publikum, Programmgestaltung und Rezeptionshaltung im frühen deutschen Kino (1906–1918). Dissertation zur Erlangung des Grades eines Dr. phil., Fachbereich II Medienwissenschaft, Universität Trier."
   - id: "10"
     text: "Braun, B. (2000). Patriotisches Kino im Krieg. Beobachtungen in der Garnisonsstadt Trier. In: KINtop. Jahrbuch zur Erforschung des frühen Films, Bd. 9, S. 100–121."
+  
+  - id: "11" 
+    text: "Autor unbekannt. (2016, 2. Februar). Trierer Handel einst und heute – Konsum statt Schwofen. Trierischer Volksfreund. https://www.volksfreund.de/region/trier-trierer-land/trierer-handel-einst-und-heute-konsum-statt-schwofen_aid-6103468."
+
+  - id: "12" 
+    text: "Autor unbekannt. (2016, 2. Februar). Trierer Handel einst und heute – Konsum statt Schwofen. Trierischer Volksfreund. https://www.volksfreund.de/region/trier-trierer-land/trierer-handel-einst-und-heute-konsum-statt-schwofen_aid-6103468."
+
 
 ---
 
@@ -98,3 +105,6 @@ Nach einer vollständigen baulichen Umgestaltung eröffnete das Gebäude im Nove
 
 Auch in den 1930er Jahren blieb das Neue Theater ein zentraler Bestandteil des Trierer Kulturlebens. Am 21. September 1937 wurde das Haus unter Theaterleiter Schneider erneut feierlich eröffnet und präsentierte sich weiterhin als kombiniertes Film- und Bühnentheater <sup><a href="#source-1">1</a></sup>. Im Jahr 1938 war das Neue Theater fest im kulturellen Alltag der Stadt verankert und repräsentierte die fortschrittlichste Form städtischer Unterhaltung, die aus der langfristigen Entwicklung der Reichshallen-Lichtspiele hervorgegangen war.<sup><a href="#source-1">1</a></sup> <sup><a href="#source-4">4</a></sup> <sup><a href="#source-5">5</a></sup>
 
+Das Neue Theater war bis in die frühen 1970er-Jahre Teil eines dichten Vergnügungskomplexes an der Ecke Simeon-/Moselstraße, der als eines der lebendigsten Unterhaltungszentren Triers galt. Zu diesem sogenannten „Vergnügungsdorado“ zählten neben dem Neuen Theater das Café Astoria, das Gasthaus Zur Postkutsche, das Kino Metropol sowie der Schieffer-Keller. <sup><a href="#source-11">11</a></sup>
+
+In den 1970er-Jahren wurden während der groß angelegten Abriss- und Neubauphase in der Simeonstraße, die zu den umfangreichsten Umgestaltungsmaßnahmen der Trierer Innenstadt zählte, nahezu alle diese Einrichtungen beseitigt <sup><a href="#source-12">12</a></sup>. Allein der mittelalterliche Gewölbekeller des Schieffer-Kellers überdauerte diese Phase und wurde in das 1975 eröffnete Kaufhaus Neckermann integriert, das seit 1978 unter dem Namen Karstadt firmiert <sup><a href="#source-11">11</a></sup> <sup><a href="#source-12">12</a></sup>.
