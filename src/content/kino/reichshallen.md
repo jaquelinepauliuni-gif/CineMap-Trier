@@ -104,7 +104,7 @@ Nach einer vollständigen baulichen Umgestaltung eröffnete das Gebäude im Nove
 #### Etablierung als kulturelles Zentrum der Stadt 
 
 Auch in den 1930er Jahren blieb das Neue Theater ein zentraler Bestandteil des Trierer Kulturlebens. Am 21. September 1937 wurde das Haus unter Theaterleiter Schneider erneut feierlich eröffnet und präsentierte sich weiterhin als kombiniertes Film- und Bühnentheater <sup><a href="#source-1">1</a></sup>. Im Jahr 1938 war das Neue Theater fest im kulturellen Alltag der Stadt verankert und repräsentierte die fortschrittlichste Form städtischer Unterhaltung, die aus der langfristigen Entwicklung der Reichshallen-Lichtspiele hervorgegangen war.<sup><a href="#source-1">1</a></sup> <sup><a href="#source-4">4</a></sup> <sup><a href="#source-5">5</a></sup>
-
+<br><br>
 Das Neue Theater war bis in die frühen 1970er-Jahre Teil eines dichten Vergnügungskomplexes an der Ecke Simeon-/Moselstraße, der als eines der lebendigsten Unterhaltungszentren Triers galt. Zu diesem sogenannten „Vergnügungsdorado“ zählten neben dem Neuen Theater das Café Astoria, das Gasthaus Zur Postkutsche, das Kino Metropol sowie der Schieffer-Keller. <sup><a href="#source-11">11</a></sup>
-
+<br><br>
 In den 1970er-Jahren wurden während der groß angelegten Abriss- und Neubauphase in der Simeonstraße, die zu den umfangreichsten Umgestaltungsmaßnahmen der Trierer Innenstadt zählte, nahezu alle diese Einrichtungen beseitigt <sup><a href="#source-12">12</a></sup>. Allein der mittelalterliche Gewölbekeller des Schieffer-Kellers überdauerte diese Phase und wurde in das 1975 eröffnete Kaufhaus Neckermann integriert, das seit 1978 unter dem Namen Karstadt firmiert <sup><a href="#source-11">11</a></sup> <sup><a href="#source-12">12</a></sup>.
