@@ -91,4 +91,4 @@ Das Apollo-Theater war mit modernster Technik ausgestattet. Es verfügte über g
 #### Erhaltene Spuren
 
 Mit der Verbreitung der Fernsehapparate begann in den 1960er Jahren das Kinosterben: „Ein bis zwei gute Filme konnten uns über das Jahr retten, aber am Schluss waren wir froh, dass wir das Kino los waren“, erinnerte sich <a href="/CineMap-Trier/kinobetreiber/schieffer">Ernst-Ludwig Schieffer</a> <sup><a href="#source-2">2</a></sup>. Trotz der Schließung des Kinos 1967 und der anschließenden Umwandlung dessen zunächst in den Verma-Markt und später in den Edeka-Markt sind noch viele Hinweise auf die Geschichte des Kinos in Trier-Süd erhalten geblieben <sup><a href="#source-2">2</a></sup>. Die beiden Säulen bei der heutigen Gemüseabteilung, die charakteristischen Türprofile in den Foyer- und Seitengängen sowie die südliche Nische, in der einst die Apollo-Statue stand, erinnern noch an das historische Lichtspielhaus <sup><a href="#source-2">2</a></sup>. 
-
+<br>
