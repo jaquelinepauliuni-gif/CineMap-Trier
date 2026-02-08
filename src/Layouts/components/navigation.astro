@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
-const base = import.meta.env.BASE_URL; // lokal: "/" | GH Pages: "/CineMap-Trier/"
+const base = import.meta.env.BASE_URL;
 
 // Prefixe absolute interne Pfade mit BASE_URL
 const withBase = (p: string) =>
@@ -16,20 +16,16 @@ const slugFromId = (e: { id: string }) => {
 };
 
 const kinos: CollectionEntry<"kino">[] = (await getCollection("kino")).sort(
-  (a: CollectionEntry<"kino">, b: CollectionEntry<"kino">) =>
-    a.data.name.localeCompare(b.data.name, "de")
+  (a, b) => a.data.name.localeCompare(b.data.name, "de")
 );
 
 const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (
   await getCollection("kinobetreiber")
-).sort(
-  (a: CollectionEntry<"kinobetreiber">, b: CollectionEntry<"kinobetreiber">) =>
-    a.data.name.localeCompare(b.data.name, "de")
-);
+).sort((a, b) => a.data.name.localeCompare(b.data.name, "de"));
 ---
 
 <nav class="bg-[#460000] shadow antialiased md:static sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto flex items-center min-h-20 pl-0 pr-4 px-4">
+  <div class="max-w-7xl mx-auto flex items-center min-h-20 px-4">
     <!-- LOGO -->
     <a href={withBase("/")} class="shrink-0 mr-16">
       <img
@@ -39,14 +35,19 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (
       />
     </a>
 
+    <!-- Burger (nur mobil sichtbar) -->
     <button
       id="mobile-menu-button"
       class="md:hidden text-white ml-auto p-2 focus:outline-none"
       aria-label="Menü öffnen"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      type="button"
     >
       <span id="burger-icon" class="block text-3xl leading-none">☰</span>
     </button>
 
+    <!-- Desktop-Navigation -->
     <ul
       class="hidden md:flex gap-2 text-white ml-auto"
       style='font-family: "Crimson Text", serif;'
@@ -58,9 +59,8 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (
         <a href={withBase("/kino")} class="nav-link flex items-center gap-1">
           Kinos <span class="dropdown-arrow">▾</span>
         </a>
-
         <ul class="dropdown">
-          {kinos.map((kino: CollectionEntry<"kino">) => (
+          {kinos.map((kino) => (
             <li>
               <a href={withBase(`/kino/${slugFromId(kino)}`)}>{kino.data.name}</a>
             </li>
@@ -69,12 +69,14 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (
       </li>
 
       <li class="relative group">
-        <a href={withBase("/kinobetreiber")} class="nav-link flex items-center gap-1">
+        <a
+          href={withBase("/kinobetreiber")}
+          class="nav-link flex items-center gap-1"
+        >
           Betreiber <span class="dropdown-arrow">▾</span>
         </a>
-
         <ul class="dropdown">
-          {kinobetreiber.map((b: CollectionEntry<"kinobetreiber">) => (
+          {kinobetreiber.map((b) => (
             <li>
               <a href={withBase(`/kinobetreiber/${slugFromId(b)}`)}>{b.data.name}</a>
             </li>
@@ -86,7 +88,6 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (
         <span class="nav-link flex items-center gap-1 cursor-default">
           Karte <span class="dropdown-arrow">▾</span>
         </span>
-
         <ul class="dropdown">
           <li><a href={withBase("/karte")}>Karte</a></li>
           <li><a href={withBase("/zeitleiste")}>Zeitleiste</a></li>
@@ -97,7 +98,6 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (
         <span class="nav-link flex items-center gap-1 cursor-default">
           Über Uns <span class="dropdown-arrow">▾</span>
         </span>
-
         <ul class="dropdown">
           <li><a href={withBase("/projekt")}>Projekt</a></li>
           <li><a href={withBase("/methoden")}>Methoden</a></li>
@@ -106,98 +106,143 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (
       </li>
     </ul>
   </div>
+
+  <!-- ✅ MOBILE MENU: fixed + scrollbar + accordion -->
   <div
-  id="mobile-menu"
-  class="md:hidden hidden bg-[#460000] text-white px-4 pb-6"
-  style='font-family: "Crimson Text", serif;'
->
-  <ul class="space-y-2">
-    <li><a href={withBase("/")} class="block py-2">Home</a></li>
-    <li><a href={withBase("/geschichte")} class="block py-2">Geschichte</a></li>
+    id="mobile-menu"
+    class="md:hidden hidden fixed left-0 right-0 top-24 bg-[#460000] text-white px-4 pb-6 z-50
+           max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain"
+    style='font-family: "Crimson Text", serif;'
+  >
+    <ul class="space-y-2">
+      <li><a href={withBase("/")} class="block py-2">Home</a></li>
+      <li><a href={withBase("/geschichte")} class="block py-2">Geschichte</a></li>
 
-    <li class="pt-2 font-semibold">Kinos</li>
-    {kinos.map((kino: CollectionEntry<"kino">) => (
-      <li class="pl-4">
-        <a href={withBase(`/kino/${slugFromId(kino)}`)} class="block py-1">
-          {kino.data.name}
-        </a>
+      <!-- Kinos -->
+      <li class="pt-2">
+        <button
+          type="button"
+          class="w-full flex items-center justify-between py-2 font-semibold"
+          data-acc="kinos"
+        >
+          <span>Kinos</span><span class="text-xl leading-none" data-acc-icon="kinos">+</span>
+        </button>
+        <ul class="hidden pl-4 space-y-1" data-acc-panel="kinos">
+          {kinos.map((kino) => (
+            <li>
+              <a href={withBase(`/kino/${slugFromId(kino)}`)} class="block py-1">
+                {kino.data.name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </li>
-    ))}
 
-    <li class="pt-2 font-semibold">Betreiber</li>
-    {kinobetreiber.map((b: CollectionEntry<"kinobetreiber">) => (
-      <li class="pl-4">
-        <a href={withBase(`/kinobetreiber/${slugFromId(b)}`)} class="block py-1">
-          {b.data.name}
-        </a>
+      <!-- Betreiber -->
+      <li class="pt-2">
+        <button
+          type="button"
+          class="w-full flex items-center justify-between py-2 font-semibold"
+          data-acc="betreiber"
+        >
+          <span>Betreiber</span><span class="text-xl leading-none" data-acc-icon="betreiber">+</span>
+        </button>
+        <ul class="hidden pl-4 space-y-1" data-acc-panel="betreiber">
+          {kinobetreiber.map((b) => (
+            <li>
+              <a href={withBase(`/kinobetreiber/${slugFromId(b)}`)} class="block py-1">
+                {b.data.name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </li>
-    ))}
 
-    <li class="pt-2 font-semibold">Karte</li>
-    <li class="pl-4"><a href={withBase("/karte")}>Karte</a></li>
-    <li class="pl-4"><a href={withBase("/zeitleiste")}>Zeitleiste</a></li>
+      <!-- Karte -->
+      <li class="pt-2">
+        <button
+          type="button"
+          class="w-full flex items-center justify-between py-2 font-semibold"
+          data-acc="karte"
+        >
+          <span>Karte</span><span class="text-xl leading-none" data-acc-icon="karte">+</span>
+        </button>
+        <ul class="hidden pl-4 space-y-1" data-acc-panel="karte">
+          <li><a href={withBase("/karte")} class="block py-1">Karte</a></li>
+          <li><a href={withBase("/zeitleiste")} class="block py-1">Zeitleiste</a></li>
+        </ul>
+      </li>
 
-    <li class="pt-2 font-semibold">Über Uns</li>
-    <li class="pl-4"><a href={withBase("/projekt")}>Projekt</a></li>
-    <li class="pl-4"><a href={withBase("/methoden")}>Methoden</a></li>
-    <li class="pl-4"><a href={withBase("/team")}>Team</a></li>
-  </ul>
-</div>
+      <!-- Über Uns -->
+      <li class="pt-2">
+        <button
+          type="button"
+          class="w-full flex items-center justify-between py-2 font-semibold"
+          data-acc="ueber"
+        >
+          <span>Über Uns</span><span class="text-xl leading-none" data-acc-icon="ueber">+</span>
+        </button>
+        <ul class="hidden pl-4 space-y-1" data-acc-panel="ueber">
+          <li><a href={withBase("/projekt")} class="block py-1">Projekt</a></li>
+          <li><a href={withBase("/methoden")} class="block py-1">Methoden</a></li>
+          <li><a href={withBase("/team")} class="block py-1">Team</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </nav>
 
-
-
 <style>
-.nav-link {
-  padding: 1rem 1.25rem;
-  display: inline-block;
-}
+  .nav-link {
+    padding: 1rem 1.25rem;
+    display: inline-block;
+  }
 
-.nav-link:hover {
-  background: rgba(255,255,255,0.1);
-  border-radius: 0.5rem;
-}
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+  }
 
-.dropdown-arrow {
-  font-size: 0.75rem;
-  opacity: 0.8;
-}
+  .dropdown-arrow {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
 
-/* DROPDOWN */
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 220px;
-  max-height: 68vh;
-  overflow-y: auto;
-  background: white;
-  color: #460000;
-  border-radius: 0.75rem;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  padding: 0.5rem 0;
-  opacity: 0;
-  transform: translateY(8px);
-  pointer-events: none;
-  transition: all 0.2s ease;
-  z-index: 50;
-}
+  /* DROPDOWN */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    max-height: 68vh;
+    overflow-y: auto;
+    background: white;
+    color: #460000;
+    border-radius: 0.75rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: all 0.2s ease;
+    z-index: 50;
+  }
 
-.group:hover .dropdown {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
+  .group:hover .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
-.dropdown li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  white-space: nowrap;
-}
+  .dropdown li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
 
-.dropdown li a:hover {
-  background: #f5efe6;
-}
+  .dropdown li a:hover {
+    background: #f5efe6;
+  }
 </style>
 
 <script>
@@ -205,17 +250,38 @@ const kinobetreiber: CollectionEntry<"kinobetreiber">[] = (
   const menu = document.getElementById("mobile-menu");
   const icon = document.getElementById("burger-icon");
 
+  function setMenu(open: boolean) {
+    if (!btn || !menu || !icon) return;
+    menu.classList.toggle("hidden", !open);
+    icon.textContent = open ? "✕" : "☰";
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    // Background-Scroll sperren wenn Menü offen ist
+    document.documentElement.classList.toggle("overflow-hidden", open);
+  }
+
   if (btn && menu && icon) {
     btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-      icon.textContent = menu.classList.contains("hidden") ? "☰" : "✕";
+      const willOpen = menu.classList.contains("hidden");
+      setMenu(willOpen);
     });
 
-    menu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menu.classList.add("hidden");
-        icon.textContent = "☰";
+    // Accordion Toggles
+    menu.querySelectorAll<HTMLElement>("[data-acc]").forEach((t) => {
+      t.addEventListener("click", () => {
+        const key = t.getAttribute("data-acc");
+        const panel = menu.querySelector<HTMLElement>(`[data-acc-panel="${key}"]`);
+        const ico = menu.querySelector<HTMLElement>(`[data-acc-icon="${key}"]`);
+        if (!panel) return;
+
+        panel.classList.toggle("hidden");
+        const isOpen = !panel.classList.contains("hidden");
+        if (ico) ico.textContent = isOpen ? "−" : "+";
       });
+    });
+
+    // Bei Link-Klick Menü schließen
+    menu.querySelectorAll<HTMLAnchorElement>("a").forEach((link) => {
+      link.addEventListener("click", () => setMenu(false));
     });
   }
 </script>
