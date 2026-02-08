@@ -25,9 +25,14 @@ const withBase = (p: string) => (p.startsWith("/") ? base.replace(/\/$/, "") + p
 	</head>
 	<body class="min-h-screen flex flex-col">
         <Navigation />
-		<main class={fullWidth ? "w-full py-8 grow" : "container mx-auto py-8 grow"}>
-			<slot />
-		</main>
+		<main
+  class={fullWidth
+    ? "w-full px-4 md:px-0 py-8 grow"
+    : "container mx-auto px-4 md:px-0 py-8 grow"}
+>
+  <slot />
+</main>
+
 		<Footer />
 	</body>
 </html>
